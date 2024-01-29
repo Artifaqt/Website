@@ -1,0 +1,92 @@
+// _global.scss
+
+// Define global styles and variables here
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; // Hide overflow to prevent scrollbars
+}
+
+.dark-screen {
+    background: linear-gradient(to bottom right, #8B68FF, #F8A902);
+    color: #fff;
+    display: flex;
+    justify-content: center; // Center horizontally
+    align-items: center; // Center vertically
+    height: 100vh;
+    position: relative;
+
+    .content {
+        text-align: center;
+        max-width: 80%; // Adjust the maximum width as needed
+        padding: 20px; // Adjust the padding as needed for spacing
+        background-color: rgba(0, 0, 0, 0.8); // Slightly darker background color (adjust opacity as needed)
+        border-radius: 10px; // Rounded corners
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Subtle drop shadow
+        opacity: 0; // Initially hide the box
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; // Apply transition for smooth fade-in and scale
+
+        /* Add hover effect */
+        &:hover {
+            transform: scale(1.05); // Increase size on hover (adjust as needed)
+        }
+    }
+
+    // ... (existing styles)
+
+    animation: gradientScroll 10s linear infinite alternate; // Animation for scrolling gradient (added "alternate")
+    background-size: 200% 200%; // Required for the background to move
+}
+
+@keyframes gradientScroll {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%; // Scroll the gradient diagonally
+    }
+}
+
+.fade-in-clickable {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#welcome-text {
+    /* Default font size for smaller screens */
+    font-size: 18px;
+
+    @media screen and (min-width: 768px) {
+        /* Font size for screens wider than 768px */
+        font-size: 24px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        /* Font size for screens wider than 1024px */
+        font-size: 30px;
+    }
+}
+
+.option {
+    /* Default font size for smaller screens */
+    font-size: 14px;
+
+    @media screen and (min-width: 768px) {
+        /* Font size for screens wider than 768px */
+        font-size: 18px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        /* Font size for screens wider than 1024px */
+        font-size: 24px;
+    }
+
+    margin-right: 20px; // Adjust the spacing as needed
+}
+
+.hidden {
+    display: none;
+}
