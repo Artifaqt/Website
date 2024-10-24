@@ -71,9 +71,4 @@ Here’s an overview of the project’s file structure:
 - **Adjust Music Volume**: Edit the `volume` property in the `musicPlayer.js` file to adjust the background music volume.
 - **Add More Music**: Simply place additional `.mp3` files in the `/assets/music/` folder. The PHP script will dynamically list them.
 - **Fonts**: You can update the custom fonts by editing the `@font-face` rules in the `landing.css` file or by importing new fonts from Google Fonts.
----# Website
-# Website
-# Website
-# Website
-# Website
-# Website
+
