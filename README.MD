@@ -10,7 +10,6 @@ This project is the source code for **Artifaqt.io**, a personal website with dyn
 4. [Installation](#installation)
 5. [Usage](#usage)
 6. [Customization](#customization)
-7. [Credits](#credits)
 
 ---
 
