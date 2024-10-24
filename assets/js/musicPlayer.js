@@ -44,10 +44,12 @@ async function playRandomSong() {
 // Automatically play a random song on page load and listen for song end
 window.onload = function() {
     const audioElement = document.getElementById('audio');
+    
+    // Play a random song when the page loads
     playRandomSong();
 
-    // Play a new random song when the current song ends
+    // When the current song ends, play another random song
     audioElement.addEventListener('ended', function() {
-        playRandomSong();
+        playRandomSong();  // Play a new random song
     });
 };
